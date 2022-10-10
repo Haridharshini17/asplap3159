@@ -1,0 +1,20 @@
+Doctrine\Tests\ORM\Mapping\BloodGroup:
+ type: entity
+ repositoryClass: Doctrine\Tests\ORM\Mapping\BloodGroupRepository
+ table: blood_group
+ schema: users_records
+ indexes:
+   name_index:
+      columns: [name]
+ id: 
+  id:
+    type: integer
+    generator:
+      strategy: AUTO 
+ fields:
+  blood_group_name:
+    type: text
+    length: 50
+# lifecycleCallbacks:
+#     prePersist: [ doStuffOnPrePersist, doOtherStuffOnPrePersistToo ]
+#     postPersist: [ doStuffOnPostPersist ]
